@@ -1,0 +1,16 @@
+1.How do I create a hidden file or folder?
+  We just need to type this in terminal to hide the folder or file ==>
+  // chflags hidden <filename>
+  // chflags nohidden <filename> 
+
+  How do I display it in the CLI?
+  In order to display it in CLI including hidden files ==>
+  // ls -a 
+
+2. How do I create multiple nested directories.
+   mkdir -p folder/name/admin/users/files
+   All we need to type -p to create multiple nested directories.	 
+	
+
+3. How do I append a message to a file, without a newline character.
+   By following this command // echo -e 'This is a good idea \n This is not a good idea' >> filename 
