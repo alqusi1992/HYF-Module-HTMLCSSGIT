@@ -343,6 +343,12 @@ position: relative;
   top: -15px;
 }
 
+.break-line {
+  display: block;
+  line-height: 35px;
+  color: red;
+}
+
 
 
 
