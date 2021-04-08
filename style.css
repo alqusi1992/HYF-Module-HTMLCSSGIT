@@ -7,34 +7,14 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgba(41,207,106,1) 53%, rgba(0,212,255,1) 100%);
+  background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(41,207,106,1) 53%, rgba(0,212,255,1) 100%);
 }
 /* first section */
 h1,h2,h3,h4,h5,h6,li {
   color: #fff;
 }
 
-.background-img {     
-  position: absolute;
-  left:1000px;
-  top: 182px;
-  z-index: -2;
-  transform: rotate(90deg);
-  border-radius: 50px;
-  opacity: 0.4;
-  
 
-}
-.background-img1 {     
-  position: absolute;
-  left:300px;
-  top: 550px;
-  z-index: -2;
-  transform: rotate(90deg);
-  border-radius: 50px;
-  opacity: 0.4;
-
-}
 
 .resume {
   max-width: 800px;
@@ -43,12 +23,12 @@ h1,h2,h3,h4,h5,h6,li {
   display: flex;
 }
 
-#first-section {
+.information-part {
   background-color: rgb(68, 36, 36);
   flex: 1;
 }
 
-#first-section img {
+.information-part img {
   border:2px solid #fff;
   display: block;
   margin:30px auto;
@@ -56,7 +36,7 @@ h1,h2,h3,h4,h5,h6,li {
 }
 .resume h1 {
   text-align: center;
-  font-size: 27px;
+  font-size: 24px;
 }
 
 .resume h2 {
@@ -86,43 +66,45 @@ margin-left: 40px;
 margin-top: 10px;
 
 }
-#inside-1 {
-  background-color: #fff;
-  padding: 7px;
-  width: 160px;
-}
 .skill-2 {
   border: 1px solid #fff;
   width: 190px;
   margin-left: 40px;
   margin-top: 10px;
-  }
-  #inside-2 {
+}
+.skill-3 {
+  border: 1px solid #fff;
+  width: 190px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.inside-border-1 {
+  background-color: #fff;
+  padding: 7px;
+  width: 160px;
+}
+.inside-border-2 {
     background-color: #fff;
     padding: 7px;
     width: 100px;
   }
-
-  .skill-3 {
-    border: 1px solid #fff;
-    width: 190px;
-    margin-left: 40px;
-    margin-top: 10px;
-    }
-    #inside-3 {
+  
+ .inside-border-3 {
       background-color: #fff;
       padding: 7px;
       width: 130px;
     }
 
-#small-border {
+.under-line-coding {
   display: block;
   border-bottom: 1px solid #fff;
   width: 120px;
   margin-left: 70px;
   margin-top: 10px;
 }
-#line1 {
+.under-line {
+  display: block;
+  border-bottom: 1px solid #fff;
   margin-top: 30px;
 }
 
@@ -152,7 +134,7 @@ ul.social-part li a:hover {
 /* Start second Section */
 
 /* EXPERIENCE Part */
-#second-section {
+.second-section {
   flex: 2;
 }
 
@@ -161,48 +143,66 @@ ul.social-part li a:hover {
   font-family:cursive;
 }
 
-#line2 {
-  margin-top: 10px;
-  width: 450px;
-  margin-left: 40px;
+.under-line-2{
+    display: block;
+    border-bottom: 1px solid #000;
+    margin-top: 20px;
+    width: 400px;
+    margin-left: 65px;
 }
 
 .resume p {
   text-align: center;
   margin-top: 20px;
+  font-size: 14px;
   
  
 }
 .experince-paragraph {
+  font-size: 20px !important;
   font-weight: bold;
-  font-size: 23px;
-  margin-right: 90px;
+ 
 }
 
-.vertical { 
-  border-left: 2px solid black; 
-  height: 170px; 
-  position:absolute; 
-  left:44%;
-  top: 19.5%; 
-} 
-.circle {
-  background-color: black;
+.experince-part {
+  position: relative;
+}
+
+.experince-part:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 2px;
+  background: #000;
+  position: absolute;
+  top: 80px;
+  left: 28px;
+}
+
+.experince-part::after {
+  content: "";
+  display: block;
   width: 10px;
   height: 10px;
-  border-radius: 100px;
-}
-.circle1 {
+  background: #000;
+  border-radius: 50%;
   position: absolute;
-  top:19%;
-  left: 43.8%;
+  left: 24px;
+  top: 78px;
 }
 
-.circle2 {
+.experince-paragraph::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
   position: absolute;
-  top:29%;
-  left: 43.8%;
+  left: 24px;
+  top: 160px;
 }
+
 
 /* EDUCATION PART */
 
@@ -211,60 +211,75 @@ ul.social-part li a:hover {
   font-family:cursive;
 }
 
+
+.education-list {
+  position: relative;
+}
+
+.education-list:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 2px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 28px;
+}
+
+.list::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 24px;
+  top: 160px;
+}
+.list::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 24px;
+  top: 80px;
+}
+.sub-list::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 24px;
+  top: -1px;
+}
+
 ul.education-list li {
   color: #000;
   text-align: center;
   margin-top: 15px;
   list-style: none;
-  
-  
-}
-#a {
-  position: relative;
-  left: 10px;
 }
 
-.list-a {
-  position: relative;
-  left: 15px;
-}
-
-.list {
+.list .sub-list{
+  font-size: 20px;
+  margin-left: -100px;
   font-weight: bold;
-  font-size: 24px;
-  margin-right: 90px;
-  margin-left: -65px;  
-}
-.vertical1 { 
-  border-left: 2px solid black; 
-  height: 200px; 
-  position:absolute; 
-  left:44%;
-  top: 47.7%; 
 } 
-.circle {
-  background-color: black;
-  width: 10px;
-  height: 10px;
-  border-radius: 100px;
-}
-.circle3 {
-  position: absolute;
-  top:47%;
-  left: 43.8%;
+
+.list .education-paragraph {
+  font-size: 14px;
+  margin-left: 30px;
 }
 
-.circle4 {
-  position: absolute;
-  top:55%;
-  left: 43.8%;
-}
 
-.circle5 {
-  position: absolute;
-  top:62.5%;
-  left: 43.8%;
-}
 
 
 /* Hobbies PART  */
@@ -298,116 +313,37 @@ ul.hobbies li {
   font-family:cursive;
 }
 
-ul.language  {
-  display: flex;
+.list-language ul {
+display: flex;
 justify-content: center;
 align-items: center;
-gap:60px;
+gap:80px;
 margin-top: 20px;
-margin-bottom: 20px;
+margin-bottom: 80px;
+position: relative;
+
 }
-ul.language li {
+.list-language ul li {
   list-style-type:none;
   color: #000;
-}
-
-#circle-language1 {
-  border: 3px solid #000;
-  padding: 30px;
-  border-radius: 50%;
-}
-
-#circle-language2 {
-  border: 3px solid #000;
-  padding: 30px;
-  border-radius: 50%;
+  font-size: 18px;
   text-align: center;
 }
 
 
-#circle-language3 {
-  border: 3px solid #000;
-  padding: 30px;
+.list-language li.sub-list-language:before {
+  content: "";
+  display: block;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
-  text-align: center;
+  border: 2px solid #000;
+  margin-left: -25px !important;
+  position: absolute;
+  top: -15px;
 }
 
 
-
-
-
-@media only screen and (max-width: 1440px) {
-  body {
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(41,207,106,1) 23%, rgba(0,212,255,1) 60%);
-
-  }
-
-  .background-img {     
-    position: absolute;
-    left:750px;
-    top: 182px;
-    z-index: -2;
-    transform: rotate(90deg);
-    border-radius: 50px;
-    opacity: 0.4;
-    
-  
-  }
-  .background-img1 {     
-    position: absolute;
-    left:80px;
-    top: 550px;
-    z-index: -2;
-    transform: rotate(90deg);
-    border-radius: 50px;
-    opacity: 0.4;
-  
-  }
-
-
-  .vertical {
-    position: absolute;
-    left:42%;
-    top: 25%; 
-  }
-
-
-  .circle1 {
-  position: absolute;
-  top:24%;
-  left: 41.8%;
-  }
-  .circle2 { 
-  position: absolute;
-  top:35%;
-  left: 41.8%;
-  }
-  
-  .vertical1 { 
-    position:absolute; 
-    left:42%;
-    top: 58%; 
-  } 
-  .circle3 {
-  position: absolute;
-  top:57.5%;
-  left: 41.8%;
-  }
-
-  .circle4 {
-    position: absolute;
-    top:67%;
-    left: 41.8%;
-    }
-
-  .circle5 {
-    position: absolute;
-    top:77%;
-    left: 41.8%;
-    }
-  }
 
 
 
