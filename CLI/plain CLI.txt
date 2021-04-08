@@ -5,7 +5,7 @@
   for example:
   // mkdir .newfolder
   // cd .newfolder
-  // touch newfile.txt
+  // touch .newfile.txt
 
   How do I display it in the CLI?
   In order to display it in CLI including hidden files ==>
