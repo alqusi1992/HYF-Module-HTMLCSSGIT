@@ -9,7 +9,7 @@
 
   How do I display it in the CLI?
   In order to display it in CLI including hidden files ==>
-  // ls -a 
+  // ls -la 
 
 2. How do I create multiple nested directories.
    mkdir -p folder/name/admin/users/files
