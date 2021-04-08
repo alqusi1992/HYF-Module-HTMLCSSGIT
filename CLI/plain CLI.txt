@@ -1,6 +1,11 @@
-1.How do I create a hidden file or folder?
-  We just need to type this in terminal to hide the folder or file ==>
-  // mkdir .hiddenfolder 
+1.* How do I create a hidden file or folder?
+  To make that folder hidden, add a dot (.) at the beginning of the name ==>
+  // mkdir .hiddenfolder
+* The touch command creates a new blank file in the hidden folder ==>
+  for example:
+  // mkdir .newfolder
+  // cd .newfolder
+  // touch newfile.txt
 
   How do I display it in the CLI?
   In order to display it in CLI including hidden files ==>
