@@ -1,7 +1,6 @@
 1.How do I create a hidden file or folder?
   We just need to type this in terminal to hide the folder or file ==>
-  // chflags hidden <filename>
-  // chflags nohidden <filename> 
+  // mkdir .hiddenfolder 
 
   How do I display it in the CLI?
   In order to display it in CLI including hidden files ==>
