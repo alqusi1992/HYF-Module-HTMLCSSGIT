@@ -6,6 +6,10 @@
   // mkdir .newfolder
   // cd .newfolder
   // touch .newfile.txt
+  
+  // There is also another way, but it doesn't work on my MacBook terminal
+  ==> mkdir newfolder.html
+  ==> attrib +h newfolder.html
 
   How do I display it in the CLI?
   In order to display it in CLI including hidden files ==>
