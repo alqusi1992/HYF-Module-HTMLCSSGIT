@@ -15,10 +15,14 @@
   list-style: none;
 }
 body {
-  background: linear-gradient(100deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background: linear-gradient(
+    100deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
   text-align: center;
   color: #fff;
-
 }
 section {
   clear: both;
@@ -47,35 +51,39 @@ h1 {
 */
 @keyframes heading {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177,
+      0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
+      0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177;
   }
 }
 
 h1:hover {
-  color: #FF1177;
+  color: #ff1177;
   animation: none;
   cursor: pointer;
 }
 
 h2 {
-    overflow: hidden;
-    font-family:"oswald";
-    font-size: 3.2em;
-    color: rgba(32, 32, 30, 0.767);
-    white-space: nowrap;
-    margin: 50px auto; 
-    letter-spacing: .15em;
-    opacity: 0.8;
-    animation: 
-      typing 10s steps(50, end),
-      blink-caret 1.5s  infinite;
+  overflow: hidden;
+  font-family: "oswald";
+  font-size: 3.2em;
+  color: rgba(32, 32, 30, 0.767);
+  white-space: nowrap;
+  margin: 50px auto;
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+  animation: typing 10s steps(50, end), blink-caret 1.5s infinite;
 }
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 h3 {
   font-family: "oswald";
@@ -89,28 +97,32 @@ ul {
 
 .grid-floats li {
   float: left;
+  width: 23%;
   margin: 10px;
   overflow: hidden;
   position: relative;
 }
 
-
-li.grid-item  {
+li.grid-item {
   min-height: 540px;
   margin: 10px;
-  transition: all .50s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 li.grid-item:hover {
   transform: scale(1.1);
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
   border-radius: 15px;
   color: rgb(43, 38, 38);
   opacity: 0.9;
-  -webkit-box-shadow: 7px 3px 26px 8px rgba(0,0,0,0.89); 
-  box-shadow: 7px 3px 26px 8px rgba(0,0,0,0.89);
+  -webkit-box-shadow: 7px 3px 26px 8px rgba(0, 0, 0, 0.89);
+  box-shadow: 7px 3px 26px 8px rgba(0, 0, 0, 0.89);
 }
- li.grid-item:nth-child(1) {
-  width: 680px;
+li.grid-item:nth-child(1) {
+  width: 48%;
 }
 .grid-floats li:nth-child(12) {
   clear: both;
@@ -119,17 +131,16 @@ li.grid-item:hover {
   display: block;
   width: 250px;
   height: 250px;
-  margin:40px auto;
+  margin: 40px auto;
 }
-.grid-item > p {
+.grid-item p {
   width: 330px;
   margin-top: 40px;
   font-size: 1em;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   text-align: center;
   margin: 0 auto;
- 
-} 
+}
 /*
   =============
    Flex section
@@ -140,7 +151,7 @@ li.grid-item:hover {
   flex-wrap: wrap;
 }
 
-.grid-flex li { 
+.grid-flex li {
   margin: 10px;
 }
 /* 
@@ -149,47 +160,53 @@ li.grid-item:hover {
   =========================
 */
 @media all and (max-width: 1024px) and (min-width: 600px) {
-    li.grid-item:nth-child(1),
-      li.grid-item:nth-child(2) {
-        width: 45%;
-    }
-    li.grid-item{
-      width: 30%;
-      max-height: 500px;
-    }
-    .grid-item p {
-      font-size: 1em;
-      width:225px;
-    }
-    .grid-item img {
-      width: 160px;
-      height: 160px;
-    }
+  li.grid-item:nth-child(1),
+  li.grid-item:nth-child(2) {
+    width: 45%;
+  }
+  li.grid-item {
+    width: 30%;
+    max-height: 500px;
+  }
+  .grid-item p {
+    font-size: 1em;
+    width: 225px;
+  }
+  .grid-item img {
+    width: 160px;
+    height: 160px;
+  }
 }
 /*  ==========================
     Mobile Responsive Section
     ========================== 
 */
 @media all and (max-width: 600px) {
-  .grid-item {
+  .grid-floats li {
     width: 100%;
+  }
+  .grid-item {
+    width: 95vw;
     font-size: 1em;
-}
-.grid-item p {
-  text-align: center;
-  margin: 0 auto;
-}
-li.grid-item:nth-child(1) {
-  width: 100vw;
-}
-h1 {
-  font-size: 5em;
-}
-h2 {
-  font-size: 2em;
-}
-h3 {
-  font-size: 1.9em;
-}
-}
+  }
 
+  .grid-item:hover {
+    width: 100vw;
+  }
+  .grid-item p {
+    text-align: center;
+    margin: 0 auto;
+  }
+  li.grid-item:nth-child(1) {
+    width: 100%;
+  }
+  h1 {
+    font-size: 5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.9em;
+  }
+}
